@@ -41,6 +41,9 @@ class AdminEditCompanyComponent extends Component
         {
             $this->validateOnly($fields, [
                 'newLogo' => 'required|mimes:jpg,jpeg,png,gif|dimensions:min_width=100,min_height=100',
+            ],
+            [
+                'newLogo.dimensions' => "Logo cannot be less than 100px by 100px in demension"
             ]);
         }
     }
@@ -56,6 +59,9 @@ class AdminEditCompanyComponent extends Component
         {
             $this->validate([
                 'newLogo' => 'required|mimes:jpg,jpeg,png,gif|dimensions:min_width=100,min_height=100',
+            ],
+            [
+                'newLogo.dimensions' => "Logo cannot be less than 100px by 100px in demension"
             ]);
         }
 
