@@ -24,6 +24,10 @@ class AdminAddCompanyComponent extends Component
         'logo' => 'required|mimes:jpg,jpeg,png,gif|dimensions:min_width=100,min_height=100',
         'website' => 'required|max:255|unique:companies',
     ];
+
+    protected $messages = [
+        'logo.dimensions' => "Logo cannot be less than 100px by 100px in demension"
+    ];
     
     public function updated($fields)
     {
